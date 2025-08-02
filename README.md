@@ -11,8 +11,13 @@ npm install
 ```bash
 npm start
 ```
+## features
+- node ssh server 
+- static website i made hosted
 
+## frameworks
+- [ssh2](https://www.npmjs.com/package/ssh2)
+- [blessed](https://www.npmjs.com/package/blessed) this is blessed
 
-
-# thanks to terminal.shop for the inspiration.
+#### thanks to terminal.shop for the inspiration.
 
