@@ -1,0 +1,7 @@
+## node_modules
+node_modules/
+node/node_modules/
+# SSH keys
+host.key
+host.key.pub
+node/host.key

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Background</title>
+    <style>
+        body {
+            background: #000;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .terminal {
+            background: #111;
+            color: #39ff14;
+            font-family: 'Fira Mono', 'Consolas', 'Monaco', monospace;
+            font-size: 1.5rem;
+            padding: 2rem 3rem;
+            box-shadow: 0 0 24px #000a;
+            letter-spacing: 1px;
+            border-radius: 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .prompt {
+            color: #fff;
+            margin-right: 0.5em;
+        }
+        .copy-btn {
+            background: #222;
+            color: #39ff14;
+            border: none;
+            font-family: inherit;
+            font-size: 1rem;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .copy-btn:hover {
+            background: #333;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="terminal">
+        <span class="prompt">$</span> <span id="ssh-cmd">ssh harryprogers.co.uk</span>
+        <button class="copy-btn" onclick="copySSH()">Copy</button>
+    </div>
+    <script>
+        function copySSH() {
+            const cmd = document.getElementById('ssh-cmd').textContent;
+            navigator.clipboard.writeText(cmd);
+        }
+    </script>
+</body>
+</html>
